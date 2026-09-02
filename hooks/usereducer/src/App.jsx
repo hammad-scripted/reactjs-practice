@@ -1,5 +1,6 @@
 import React from 'react';
 import { useReducer } from 'react';
+import Login from './Login';
 const App = () => {
   const initialState = { count: 0 };
   const [count, dispatch] = useReducer(reducer, initialState);
@@ -23,6 +24,7 @@ const App = () => {
       <button onClick={() => dispatch({ type: 'decrement' })}>
         Decrement{' '}
       </button>
+      <Login />
     </div>
   );
 };
