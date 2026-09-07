@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-
+import {use} from 'react';
 type ThemeContextType = {
   theme: string;
   toggleTheme: () => void;
@@ -27,7 +27,7 @@ export const ThemeProvider: React.FC<React.PropsWithChildren<{}>> = ({ children 
 
 // 3. Custom hook with validation check
 export function useTheme(): ThemeContextType {
-  const context = useContext(ThemeContext);
+  const context = use(ThemeContext);
   if (!context) {
     throw new Error('useTheme must be used within a ThemeProvider');
   }
