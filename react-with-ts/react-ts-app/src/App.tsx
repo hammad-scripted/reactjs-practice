@@ -18,6 +18,7 @@
 
 import React, { useState } from 'react';
 import Button from './components/Button';
+import UserInfo from './components/UserInfo';
 
 const App: React.FC = () => {
   // 1. Create a state variable initialized to false
@@ -31,10 +32,9 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <Button
-        label="Click Me"
-        disabled={isDisabled}
-        onClick={handleClick}
+      <Button label="Click Me" disabled={isDisabled} onClick={handleClick} />
+      <UserInfo
+        user={{ id: 1, name: 'Ankit', age: 20, email: 'jEh5o@example.com' }}
       />
     </div>
   );
