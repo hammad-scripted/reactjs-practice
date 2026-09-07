@@ -3,9 +3,11 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.tsx';
 import Todo from './components/Todo.tsx';
+import Form from './components/Form.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Todo />
+    <Form/>
   </StrictMode>,
 );
